@@ -1,0 +1,143 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f2994a, #f2c94c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('houses_with_lights.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    animation: slideIn 1s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #f39c12;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    animation: bounce 1.5s infinite;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #e67e22;
+}
+
+#name {
+    font-weight: bold;
+    color: #d35400;
+}
+
+.crackers {
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    background: url('crackers.gif') no-repeat center center;
+    background-size: contain;
+    animation: fireworks 1.5s infinite alternate, fadeIn 2s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d35400;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#sweetDisplay {
+    margin-top: 20px;
+}
+
+#sweetImage {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fireworks {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .crackers {
+        height: 150px;
+        width: 150px;
+    }
+
+    #sweetImage {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .crackers {
+        height: 100px;
+        width: 100px;
+    }
+
+    #sweetImage {
+        height: 100px;
+        width: 100px;
+    }
+}

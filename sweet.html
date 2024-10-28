@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Sweet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>आपकी पसंदीदा मिठाई कौन सी है?</h2>
+        <form>
+            <label>
+                <input type="radio" name="sweet" value="gulab_jamun" onclick="showSweet('gulab_jamun')"> गुलाब जामुन
+            </label><br>
+            <label>
+                <input type="radio" name="sweet" value="laddu" onclick="showSweet('laddu')"> लड्डू
+            </label><br>
+            <label>
+                <input type="radio" name="sweet" value="jalebi" onclick="showSweet('jalebi')"> जलेबी
+            </label><br>
+            
+        </form>
+        <div id="sweetImageContainer" class="hidden">
+            <img id="sweetImage" src="" alt="Sweet Image" class="sweet-image">
+            <p id="sweetMessage" class="sweet-message"></p>
+        </div>
+    </div>
+    <script src="sweet.js"></script>
+</body>
+</html>
